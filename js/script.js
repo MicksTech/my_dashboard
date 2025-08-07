@@ -21,32 +21,25 @@ document.querySelectorAll('#navlist a').forEach((item) => {
 });
 
 
-const chartCanvas = document.getElementById("canvas");
-if (chartCanvas) {
-    new Chart(chartCanvas, {
-        type: 'line',
-        data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-            datasets: [{
-                label: '# of votes',
-                data: [12, 3, 6, 7, 8, 4],
-                borderColor: '#0078d4',
-                backgroundColor: 'rgba(0,120,212,0.1)',
-                borderWidth: 2
-            }],
-        },
-        options: {
-            responsive: true,
-            plugins: {
-                legend: {
-                    display: true,
-                }
-            },
-            scales: {
-                y: {
-                    beginAtZero: true,
-                }
+const ctx = document.getElementById('myChart');
+
+new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 8, 9, 5, 3],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
             }
         }
-    });
-}
+    }
+});
+
+document.getElementById('datime').textContent = new Date(). getFullYear();
