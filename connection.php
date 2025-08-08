@@ -2,7 +2,7 @@
 $host = 'localhost';
 $user = 'root';
 $password = '';
-$dbname = 'db_report';
+$dbname = '';
 
 $conn = new mysqli ($host, $user, $password, $dbname);
 if ($conn->connect_error) {
